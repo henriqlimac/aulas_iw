@@ -1,0 +1,11 @@
+.img {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+img {
+    width: 25%;
+    border: 5px solid white;
+    border-radius: 20px;
+}
