@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Condicionais - JS</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>NATIONALITY SYSTEM</h1>
+
+        <div class="text">
+            Type your nationality:⠀<input type="text" id="pais">⠀
+            <input type="button" value="VERIFY" onclick="verificar()" class="button">
+        </div>
+        <hr style="background-color: white;">
+        <div class="text" style="padding-top: 25px;">
+            <div id="resultado"></div>
+        </div>
+        <script>
+            function verificar() {
+                var pais = document.querySelector('input#pais')
+                var res = document.querySelector('div#resultado')
+                var nac = (pais.value)
+                var nac = nac.toUpperCase()
+                res.innerHTML = `<p>- Your nationality is <strong>${nac}<strong></p>`
+                if(nac == 'BRA'){
+                    res.innerHTML += `<p>- You're a <strong style="color: green">bra</strong><strong style="color: yellow">zil</strong><strong style="color: blue">ian</strong>!!! [sons de copa] [pagode] [samba] [sertanejo]`
+                } else {
+                    res.innerHTML += `<p>- You're a <strong>foreign!</strong>`
+                }
+            }
+        </script>
+    </body>
+</html>
