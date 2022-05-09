@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+
+        <script>
+            var a = Number(prompt('Digite o valor de a'))
+            var b = Number(prompt('Digite o valor de b'))
+            var c = Number(prompt('Digite o valor de c'))
+
+            //Math.pow(base,exp)
+
+            var delta = (Math.pow(b,2)) - 4 * a * c
+            console.log(`Valor de delta: ${delta}`)
+
+            function calcula_raiz(b, delta, a){
+                    var x1 = (-b + Math.sqrt(delta)) / 2 * a 
+                    var x2 = (-b - Math.sqrt(delta)) / 2 * a
+                    var resultado = [x1, x2]
+                    return resultado
+            }
+
+            if (delta < 0) {
+                console.log(`> Delta negativo! - não existe raízes`)
+            } else {
+                if (delta == 0){ 
+
+                    console.log('Raízes iguais')
+                    var resultado = calcula_raiz(b, delta, a) //Isso é um vetor, pois recebe 2 valores
+
+                    console.log('Valor da raíz x1: ', resultado[0])
+                    console.log('Valor da raíz x2: ', resultado[1])
+                
+                } else {
+                    var resultado = calcula_raiz(b, delta, a)
+
+                    console.log('Valor da raíz x1: ', resultado[0])
+                    console.log('Valor da raíz x2: ', resultado[1])
+                }
+            }
+
+            //RAÍZ NEGATIVA: a = 1; b = 2; c = 3
+            //RAÍZES IGUAIS: a = 1; b = 2; c = 1
+            //RAÍZES DIFERENTES: a = -1; b = 2; c = 3
+        </script>
+
+    </body>
+</html>
