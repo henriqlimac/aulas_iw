@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 03</title>
+    </head>
+    <body>
+        
+    <script>
+        var A = Number(prompt('Habitantes do país A'))
+        var taxaA = Number(prompt('Taxa de crescimento A'))
+        var B = Number(prompt('Habitantes do país B'))
+        var taxaB = Number(prompt('Taxa de crescimento B'))
+        alert("Para parar de calcular, aperte o botão ESC várias vezes no teclado.")
+        cont = 0
+
+
+
+        if(B > A){
+            while (B > A){
+                A = A + (A * (taxaA/100))
+                B = B + (B * (taxaB/100))
+                cont ++
+
+
+
+                if(B < A){
+                    document.write(`Precisa de ${cont} anos para se igualarem. <br>`) 
+
+                    var A = Number(prompt('Habitantes do país A'))
+                    var taxaA = Number(prompt('Taxa de crescimento A'))
+                    var B = Number(prompt('Habitantes do país B'))
+                    var taxaB = Number(prompt('Taxa de crescimento B'))
+                    alert("Para parar de calcular, aperte o botão ESC várias vezes no teclado.")
+                    cont = 0
+                    }
+            }
+        }
+        else{
+
+
+
+            while (A > B){
+            A = A + (A * (taxaA/100))
+            B = B + (B * (taxaB/100))
+            cont ++
+
+                if(A < B){
+                    document.write(`Precisa de ${cont} anos para se igualarem. <br>`)  
+
+                    var A = Number(prompt('Habitantes do país A'))
+                    var taxaA = Number(prompt('Taxa de crescimento A'))
+                    var B = Number(prompt('Habitantes do país B'))
+                    var taxaB = Number(prompt('Taxa de crescimento B'))
+                    alert("Para parar de calcular, aperte o botão ESC várias vezes no teclado.")
+                    cont = 0
+                }
+            }   
+        }
+    </script>
+
+    </body>
+</html>

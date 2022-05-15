@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 07</title>
+    </head>
+    <body>
+        
+        <script>
+            var contador
+            var n = 0
+            var p = 0
+            var i = 0
+
+            for(contador = 1; contador <= 10; contador++){
+                var ns = Number(prompt('Digite um número'))
+                alert("Para sair do programa, aperte ESC várias vezes.")
+                n = n + ns
+                if(ns % 2 == 0){
+                    p++
+                }
+                else{
+                    i++
+                }
+            }
+
+            document.write(`A soma deles é de: ${n} <br><br> Os números pares são: ${p}<br><br> Os números impares são: ${i}`)
+        </script>
+
+    </body>
+</html>
