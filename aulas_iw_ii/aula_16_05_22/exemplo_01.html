@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vetores</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            num = [3, 6, 9]
+            x = [5, 8, 4]
+            
+            //Demonstra o vetor:
+            console.log("Demonstra o vetor:")
+            console.log(num)
+            console.log(typeof(num))
+            console.log(num[1])
+
+            //Empurra um elemento pro final:
+            console.log("Empurra um elemento pro final:")
+            num.push(12)
+            console.log(num)
+
+            //Mostra o tamanho do vetor:
+            console.log("Mostra o tamanho do vetor:")
+            console.log(num.length)
+
+            //Mostra o vetor de forma ordenada:
+            console.log("Mostra o vetor de forma ordenada:")
+            console.log(x.sort())
+            console.log(x)
+
+            //Utilizando laços de repetição:
+            console.log("Utilizando laços de repetição:")
+            tam = (x.length)
+            for(i = 0; i < tam ; i++){
+                console.log(x[i])
+            }
+
+            for (var i in x){
+                console.log(`Pos i = ${i} === Valor => ${x[i]}`)
+            }
+
+
+        </script>
+    </body>
+</html>
